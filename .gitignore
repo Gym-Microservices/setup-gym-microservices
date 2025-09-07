@@ -1,0 +1,45 @@
+# Directorios de microservicios clonados (no deben subirse al repo de setup)
+gateway/
+payment-microservice/
+.github/
+notification-microservice/
+class-microservice/
+core-microservice/
+member-microservice/
+coach-microservice/
+eureka-server/
+equipament-microservice/
+parent/
+
+# Archivos temporales y logs
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local
+.env
+.env.local
+.env.*.local
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos de backup
+*.bak
+*.backup
+*.old
