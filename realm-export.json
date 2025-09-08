@@ -810,7 +810,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "sgH1IMFwi6EHIX55UqxjkUQ3PfnnSVdI",
       "redirectUris": [
         "http://localhost:8084/*"
       ],
@@ -870,7 +870,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "4HaxIWJzN089rgBo1UwZrQWut4vN1SGy",
       "redirectUris": [
         "http://localhost:8082/*"
       ],
@@ -930,7 +930,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "RTHgGVT3APVz2ZJSyx1uMaacZI30uxk9",
       "redirectUris": [
         "http://localhost:8083/*"
       ],
@@ -990,7 +990,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "dDQjHWPgJbvUu7mryOEQNbMaReQz9NFK",
       "redirectUris": [
         "http://localhost:8081/*"
       ],
@@ -1050,7 +1050,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "sY9knCeLplF2lno7FjzVPOWS4Df2Yv0j",
       "redirectUris": [
         "http://localhost:8085/*"
       ],
@@ -1110,7 +1110,7 @@
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "PX5QB3BP9KDPip6EllHftCcO4Td8FEhb",
       "redirectUris": [
         "http://localhost:8087/*"
       ],
