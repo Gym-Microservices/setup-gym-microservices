@@ -1,0 +1,154 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    environment:
+      KC_HOSTNAME: localhost
+      KC_HOSTNAME_PORT: 8090
+      KC_HOSTNAME_STRICT_BACKCHANNEL: 'true'
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HEALTH_ENABLED: 'true'
+      KC_LOG_LEVEL: info
+    ports:
+      - '8090:8090'
+    networks:
+      - gym-network
+
+  rabbitmq:
+    image: rabbitmq:4.1-management
+    container_name: rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    networks:
+      - gym-network
+
+  eureka-server:
+    build:
+      context: .
+      dockerfile: ./eureka-server/Dockerfile
+    ports:
+      - '8761:8761'
+    networks:
+      - gym-network
+
+  member-microservice:
+    container_name: member-microservice
+    build:
+      context: .
+      dockerfile: ./member-microservice/Dockerfile
+    ports:
+      - '8081:8081'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+    networks:
+      - gym-network
+
+  coach-microservice:
+    container_name: coach-microservice
+    build:
+      context: .
+      dockerfile: ./coach-microservice/Dockerfile
+    ports:
+      - '8082:8082'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+    networks:
+      - gym-network
+
+  equipment-microservice:
+    container_name: equipment-microservice
+    build:
+      context: .
+      dockerfile: ./equipament-microservice/Dockerfile
+    ports:
+      - '8083:8083'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+    networks:
+      - gym-network
+
+  class-microservice:
+    container_name: class-microservice
+    build:
+      context: .
+      dockerfile: ./class-microservice/Dockerfile
+    ports:
+      - '8084:8084'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+      - member-microservice
+      - coach-microservice
+      - equipment-microservice
+    networks:
+      - gym-network
+
+  notification-microservice:
+    container_name: notification-microservice
+    build:
+      context: .
+      dockerfile: ./notification-microservice/Dockerfile
+    ports:
+      - '8085:8085'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+      - class-microservice
+    networks:
+      - gym-network
+
+  payment-microservice:
+    container_name: payment-microservice
+    build:
+      context: .
+      dockerfile: ./payment-microservice/Dockerfile
+    ports:
+      - '8086:8086'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+      - member-microservice
+    networks:
+      - gym-network
+
+  gateway:
+    container_name: gateway
+    build:
+      context: .
+      dockerfile: ./gateway/Dockerfile
+    ports:
+      - '8087:8087'
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+      - member-microservice
+      - coach-microservice
+      - equipment-microservice
+      - class-microservice
+      - notification-microservice
+      - payment-microservice
+    networks:
+      - gym-network
+
+networks:
+  gym-network:
+    driver: bridge
