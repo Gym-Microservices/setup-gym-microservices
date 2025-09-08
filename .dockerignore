@@ -1,0 +1,59 @@
+# ==== Include only what we need for Docker build ====
+# By default, exclude everything
+**/*
+
+# Include parent POM
+!parent/pom.xml
+
+# Include core-microservice
+!core-microservice/pom.xml
+!core-microservice/src/
+
+# Include payment-microservice
+!member-microservice/pom.xml
+!member-microservice/src/
+!coach-microservice/pom.xml
+!coach-microservice/src/
+!equipament-microservice/pom.xml
+!equipament-microservice/src/
+!class-microservice/pom.xml
+!class-microservice/src/
+!notification-microservice/pom.xml
+!notification-microservice/src/
+!payment-microservice/pom.xml
+!payment-microservice/src/
+
+# ==== Exclude build artifacts and temp files ====
+**/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+
+# IDE files
+**/.idea/
+**/.vscode/
+**/*.iml
+**/*.ipr
+**/*.iws
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# Git and documentation
+**/.git/
+**/.gitignore
+**/README.md
+**/docs/
+
+# Logs and temp files
+**/*.log
+**/tmp/
+**/temp/
+
+# Docker files themselves
+**/Dockerfile*
+**/.dockerignore
+
+# Environment files
+**/.env*
