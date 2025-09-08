@@ -5,11 +5,13 @@
 # Include parent POM
 !parent/pom.xml
 
-# Include core-microservice
+# Include microservices
+!eureka-server/pom.xml
+!eureka-server/src/
+!gateway/pom.xml
+!gateway/src/
 !core-microservice/pom.xml
 !core-microservice/src/
-
-# Include payment-microservice
 !member-microservice/pom.xml
 !member-microservice/src/
 !coach-microservice/pom.xml
