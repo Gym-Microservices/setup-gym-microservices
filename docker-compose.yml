@@ -10,8 +10,10 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: admin
       KC_HEALTH_ENABLED: 'true'
       KC_LOG_LEVEL: info
+    command: ["start-dev", "--http-port", "8080", "--https-port", "8443"]
     ports:
-      - '8090:8090'
+      - '8090:8080'
+      - '8443:8443'
     networks:
       - gym-network
 
