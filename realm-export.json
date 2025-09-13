@@ -1112,10 +1112,10 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "PX5QB3BP9KDPip6EllHftCcO4Td8FEhb",
       "redirectUris": [
-        "http://localhost:8087/*"
+        "http://localhost:8086/*"
       ],
       "webOrigins": [
-        "http://localhost:8087"
+        "http://localhost:8086"
       ],
       "notBefore": 0,
       "bearerOnly": false,
