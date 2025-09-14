@@ -8,7 +8,6 @@ REPOS=(
     "../parent"
     "../gateway"
     "../eureka-server"
-    "../core-microservice"
     "../class-microservice"
     "../coach-microservice"
     "../equipament-microservice"
