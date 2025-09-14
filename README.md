@@ -8,6 +8,7 @@ Setup completo para el ecosistema de microservicios del gimnasio, incluyendo scr
 
 - `clone_repos.sh` - Script para clonar todos los microservicios
 - `update_repos.sh` - Script para actualizar todos los microservicios
+- `export_user_keycloak.sh` - Script para obtener los usuarios registrados en Keycloak
 
 ### 🐳 Orquestación
 
@@ -31,7 +32,6 @@ El proyecto está compuesto por los siguientes microservicios:
 | ----------------------------- | ------------------------------------- | --------------------------- |
 | **eureka-server**             | Servidor de registro y descubrimiento | Spring Cloud Netflix Eureka |
 | **gateway**                   | API Gateway principal                 | Spring Cloud Gateway        |
-| **core-microservice**         | Lógica central                        | Java/Spring Boot            |
 | **member-microservice**       | Gestión de miembros                   | Java/Spring Boot            |
 | **coach-microservice**        | Gestión de entrenadores               | Java/Spring Boot            |
 | **class-microservice**        | Gestión de clases                     | Java/Spring Boot            |
