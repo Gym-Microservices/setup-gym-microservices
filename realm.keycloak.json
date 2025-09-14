@@ -572,10 +572,8 @@
           "attributes": {}
         }
       ],
-      "equipament-microservice": [],
       "security-admin-console": [],
       "admin-cli": [],
-      "notification-microservice": [],
       "account-console": [],
       "broker": [
         {
@@ -588,8 +586,13 @@
           "attributes": {}
         }
       ],
+      "gateway": [],
       "class-microservice": [],
       "member-microservice": [],
+      "coach-microservice": [],
+      "equipament-microservice": [],
+      "payment-microservice": [],
+      "notification-microservice": [],
       "account": [
         {
           "id": "aae3b04e-a898-447f-984f-7c5c14de2ea6",
@@ -673,9 +676,7 @@
           "containerId": "e4040b09-cb5a-446a-8718-7246d34948fa",
           "attributes": {}
         }
-      ],
-      "coach-microservice": [],
-      "payment-microservice": []
+      ]
     }
   },
   "groups": [],
@@ -869,6 +870,67 @@
       "nodeReRegistrationTimeout": 0,
       "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
       "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
+    },
+    {
+      "id": "a01e341e-4f2e-4e30-ba28-ba45953fe40b",
+      "clientId": "gateway",
+      "name": "gateway",
+      "description": "Gateway",
+      "rootUrl": "",
+      "adminUrl": "",
+      "baseUrl": "",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "4zNLfXornxiRe5wUg4GpblShp3cxG8PW",
+      "redirectUris": [
+        "http://localhost:8086/*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": true,
+      "protocol": "openid-connect",
+      "attributes": {
+        "realm_client": "false",
+        "oidc.ciba.grant.enabled": "false",
+        "client.secret.creation.time": "1757887502",
+        "backchannel.logout.session.required": "true",
+        "standard.token.exchange.enabled": "false",
+        "frontchannel.logout.session.required": "true",
+        "post.logout.redirect.uris": "+",
+        "oauth2.device.authorization.grant.enabled": "false",
+        "display.on.consent.screen": "false",
+        "backchannel.logout.revoke.offline.tokens": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "service_account",
+        "web-origins",
+        "acr",
+        "profile",
+        "roles",
+        "basic",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "organization",
+        "offline_access",
+        "microprofile-jwt"
+      ]
     },
     {
       "id": "fe8c36ee-e74b-495b-b557-20d88dcd3189",

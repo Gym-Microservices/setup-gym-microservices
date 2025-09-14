@@ -3,17 +3,16 @@ services:
     image: quay.io/keycloak/keycloak:latest
     container_name: keycloak
     environment:
-      KC_HOSTNAME: localhost
-      KC_HOSTNAME_PORT: 8090
-      KC_HOSTNAME_STRICT_BACKCHANNEL: "true"
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_HEALTH_ENABLED: "true"
+      KC_BOOTSTRAP_ADMIN_USERNAME: 'admin'
+      KC_BOOTSTRAP_ADMIN_PASSWORD: 'admin'
+      KC_HEALTH_ENABLED: 'true'
       KC_LOG_LEVEL: info
-    command: ["start-dev", "--http-port", "8080", "--https-port", "8443"]
+    command: ['start-dev', '--http-port', '8080', '--https-port', '8443', '--import-realm']
     ports:
-      - "8090:8080"
-      - "8443:8443"
+      - '8090:8080'
+      - '8443:8443'
+    volumes:
+      - ./realm.keycloak.json:/opt/keycloak/data/import/realm.json
     networks:
       - gym-network
 
@@ -21,8 +20,8 @@ services:
     image: rabbitmq:4.1-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - '5672:5672'
+      - '15672:15672'
     networks:
       - gym-network
 
@@ -32,7 +31,7 @@ services:
       context: .
       dockerfile: ./eureka-server/Dockerfile
     ports:
-      - "8761:8761"
+      - '8761:8761'
     networks:
       - gym-network
 
@@ -42,7 +41,7 @@ services:
       context: .
       dockerfile: ./member-microservice/Dockerfile
     ports:
-      - "8081:8081"
+      - '8081:8081'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -57,7 +56,7 @@ services:
       context: .
       dockerfile: ./coach-microservice/Dockerfile
     ports:
-      - "8082:8082"
+      - '8082:8082'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -72,7 +71,7 @@ services:
       context: .
       dockerfile: ./equipament-microservice/Dockerfile
     ports:
-      - "8083:8083"
+      - '8083:8083'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -87,7 +86,7 @@ services:
       context: .
       dockerfile: ./class-microservice/Dockerfile
     ports:
-      - "8084:8084"
+      - '8084:8084'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -105,7 +104,7 @@ services:
       context: .
       dockerfile: ./notification-microservice/Dockerfile
     ports:
-      - "8085:8085"
+      - '8085:8085'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -121,7 +120,7 @@ services:
       context: .
       dockerfile: ./payment-microservice/Dockerfile
     ports:
-      - "8086:8086"
+      - '8086:8086'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -137,7 +136,7 @@ services:
       context: .
       dockerfile: ./gateway/Dockerfile
     ports:
-      - "8087:8087"
+      - '8087:8087'
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -159,7 +158,7 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
     ports:
-      - "22181:22181"
+      - '22181:22181'
     networks:
       - gym-network
 
@@ -168,7 +167,7 @@ services:
     depends_on:
       - zookeeper
     ports:
-      - "29092:29092"
+      - '29092:29092'
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
