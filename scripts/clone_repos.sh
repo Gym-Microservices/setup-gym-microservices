@@ -24,7 +24,13 @@ RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
+# Cambiar al directorio padre
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SETUP_DIR="$(dirname "$SCRIPT_DIR")"
+cd "$SETUP_DIR"
+
 echo -e "${YELLOW}🚀 Iniciando clonación de microservicios...${NC}"
+echo "📁 Clonando en directorio: $(pwd)"
 echo "======================================================"
 
 # Función para clonar un repositorio
