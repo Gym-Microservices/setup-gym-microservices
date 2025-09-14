@@ -46,7 +46,6 @@ for repo in "${REPOS[@]}"; do
             ((errors++))
         fi
         
-        # Volver siempre al directorio inicial
         cd "$SCRIPT_DIR"
         echo "--------------------------------"
     else
