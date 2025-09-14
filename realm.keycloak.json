@@ -13,6 +13,11 @@
           "value": "admin"
         }
       ],
+      "roles": [
+        {
+          "name": "ROLE_ADMIN"
+        }
+      ],
       "userProfileMetadata": {
         "attributes": [
           {
@@ -94,6 +99,11 @@
           "value": "coach"
         }
       ],
+      "roles": [
+        {
+          "name": "ROLE_COACH"
+        }
+      ],
       "userProfileMetadata": {
         "attributes": [
           {
@@ -173,6 +183,11 @@
         {
           "type": "password",
           "value": "member"
+        }
+      ],
+      "roles": [
+        {
+          "name": "ROLE_MEMBER"
         }
       ],
       "userProfileMetadata": {
@@ -305,7 +320,7 @@
       },
       {
         "id": "cd60e2af-865b-458c-83bc-0ecce9b10a16",
-        "name": "ADMIN_ROLE",
+        "name": "ROLE_ADMIN",
         "description": "Administrador del sistema",
         "composite": false,
         "clientRole": false,
@@ -329,7 +344,7 @@
       },
       {
         "id": "e7b4e661-652b-4bcd-9709-6db36096fac9",
-        "name": "MEMBER_ROLE",
+        "name": "ROLE_MEMBER",
         "description": "Miembro activo del gimnasio",
         "composite": false,
         "clientRole": false,
@@ -347,7 +362,7 @@
       },
       {
         "id": "c87a5293-aa91-413e-ab0e-3230aca70be4",
-        "name": "COACH_ROLE",
+        "name": "ROLE_COACH",
         "description": "Entrenador del gimnasio",
         "composite": false,
         "clientRole": false,
