@@ -1,6 +1,253 @@
 {
+  "users": [
+    {
+      "id": "4f6ec180-340b-4d8b-959d-fdbc38d27f73",
+      "username": "administrador",
+      "firstName": "Administrador",
+      "lastName": "Administrador",
+      "email": "admin@gmail.com",
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin"
+        }
+      ],
+      "userProfileMetadata": {
+        "attributes": [
+          {
+            "name": "username",
+            "displayName": "${username}",
+            "required": true,
+            "readOnly": true,
+            "validators": {
+              "username-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true, "min": 3 },
+              "up-username-not-idn-homograph": { "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "email",
+            "displayName": "${email}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true },
+              "email": { "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "firstName",
+            "displayName": "${firstName}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "person-name-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "lastName",
+            "displayName": "${lastName}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "person-name-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true }
+            },
+            "multivalued": false
+          }
+        ],
+        "groups": [
+          {
+            "name": "user-metadata",
+            "displayHeader": "User metadata",
+            "displayDescription": "Attributes, which refer to user metadata"
+          }
+        ]
+      },
+      "enabled": true,
+      "createdTimestamp": 1757821529074,
+      "totp": false,
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "notBefore": 0,
+      "access": { "manage": true }
+    },
+    {
+      "id": "5959bb40-fcbc-4eca-9a5b-108389579c14",
+      "username": "coach",
+      "firstName": "Coach",
+      "lastName": "Coach",
+      "email": "coach@gmail.com",
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "coach"
+        }
+      ],
+      "userProfileMetadata": {
+        "attributes": [
+          {
+            "name": "username",
+            "displayName": "${username}",
+            "required": true,
+            "readOnly": true,
+            "validators": {
+              "username-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true, "min": 3 },
+              "up-username-not-idn-homograph": { "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "email",
+            "displayName": "${email}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true },
+              "email": { "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "firstName",
+            "displayName": "${firstName}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "person-name-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "lastName",
+            "displayName": "${lastName}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "person-name-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true }
+            },
+            "multivalued": false
+          }
+        ],
+        "groups": [
+          {
+            "name": "user-metadata",
+            "displayHeader": "User metadata",
+            "displayDescription": "Attributes, which refer to user metadata"
+          }
+        ]
+      },
+      "enabled": true,
+      "createdTimestamp": 1757821668740,
+      "totp": false,
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "notBefore": 0,
+      "access": { "manage": true }
+    },
+    {
+      "id": "1543ed51-4786-4992-be6a-48ad743e0327",
+      "username": "member",
+      "firstName": "Member",
+      "lastName": "Member",
+      "email": "member@gmail.com",
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "member"
+        }
+      ],
+      "userProfileMetadata": {
+        "attributes": [
+          {
+            "name": "username",
+            "displayName": "${username}",
+            "required": true,
+            "readOnly": true,
+            "validators": {
+              "username-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true, "min": 3 },
+              "up-username-not-idn-homograph": { "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "email",
+            "displayName": "${email}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true },
+              "email": { "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "firstName",
+            "displayName": "${firstName}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "person-name-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true }
+            },
+            "multivalued": false
+          },
+          {
+            "name": "lastName",
+            "displayName": "${lastName}",
+            "required": false,
+            "readOnly": false,
+            "validators": {
+              "person-name-prohibited-characters": { "ignore.empty.value": true },
+              "multivalued": { "max": "1" },
+              "length": { "max": 255, "ignore.empty.value": true }
+            },
+            "multivalued": false
+          }
+        ],
+        "groups": [
+          {
+            "name": "user-metadata",
+            "displayHeader": "User metadata",
+            "displayDescription": "Attributes, which refer to user metadata"
+          }
+        ]
+      },
+      "enabled": true,
+      "createdTimestamp": 1757821700958,
+      "totp": false,
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "notBefore": 0,
+      "access": { "manage": true }
+    }
+  ],
   "id": "4293bd3d-333c-49c9-b96c-140010cdb5be",
-  "realm": "Gimnasio",
+  "realm": "gimnasio",
+  "displayName": "",
+  "displayNameHtml": "",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": false,
@@ -59,7 +306,7 @@
       {
         "id": "cd60e2af-865b-458c-83bc-0ecce9b10a16",
         "name": "ADMIN_ROLE",
-        "description": "",
+        "description": "Administrador del sistema",
         "composite": false,
         "clientRole": false,
         "containerId": "4293bd3d-333c-49c9-b96c-140010cdb5be",
@@ -71,15 +318,9 @@
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
-          "realm": [
-            "offline_access",
-            "uma_authorization"
-          ],
+          "realm": ["offline_access", "uma_authorization"],
           "client": {
-            "account": [
-              "manage-account",
-              "view-profile"
-            ]
+            "account": ["manage-account", "view-profile"]
           }
         },
         "clientRole": false,
@@ -89,7 +330,7 @@
       {
         "id": "e7b4e661-652b-4bcd-9709-6db36096fac9",
         "name": "MEMBER_ROLE",
-        "description": "",
+        "description": "Miembro activo del gimnasio",
         "composite": false,
         "clientRole": false,
         "containerId": "4293bd3d-333c-49c9-b96c-140010cdb5be",
@@ -107,7 +348,7 @@
       {
         "id": "c87a5293-aa91-413e-ab0e-3230aca70be4",
         "name": "COACH_ROLE",
-        "description": "",
+        "description": "Entrenador del gimnasio",
         "composite": false,
         "clientRole": false,
         "containerId": "4293bd3d-333c-49c9-b96c-140010cdb5be",
@@ -273,9 +514,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "realm-management": [
-                "query-clients"
-              ]
+              "realm-management": ["query-clients"]
             }
           },
           "clientRole": true,
@@ -298,10 +537,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "realm-management": [
-                "query-users",
-                "query-groups"
-              ]
+              "realm-management": ["query-users", "query-groups"]
             }
           },
           "clientRole": true,
@@ -353,9 +589,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "account": [
-                "manage-account-links"
-              ]
+              "account": ["manage-account-links"]
             }
           },
           "clientRole": true,
@@ -423,9 +657,7 @@
           "composite": true,
           "composites": {
             "client": {
-              "account": [
-                "view-consent"
-              ]
+              "account": ["view-consent"]
             }
           },
           "clientRole": true,
@@ -446,9 +678,7 @@
     "clientRole": false,
     "containerId": "4293bd3d-333c-49c9-b96c-140010cdb5be"
   },
-  "requiredCredentials": [
-    "password"
-  ],
+  "requiredCredentials": ["password"],
   "otpPolicyType": "totp",
   "otpPolicyAlgorithm": "HmacSHA1",
   "otpPolicyInitialCounter": 0,
@@ -456,17 +686,10 @@
   "otpPolicyLookAheadWindow": 1,
   "otpPolicyPeriod": 30,
   "otpPolicyCodeReusable": false,
-  "otpSupportedApplications": [
-    "totpAppFreeOTPName",
-    "totpAppGoogleName",
-    "totpAppMicrosoftAuthenticatorName"
-  ],
+  "otpSupportedApplications": ["totpAppFreeOTPName", "totpAppGoogleName", "totpAppMicrosoftAuthenticatorName"],
   "localizationTexts": {},
   "webAuthnPolicyRpEntityName": "keycloak",
-  "webAuthnPolicySignatureAlgorithms": [
-    "ES256",
-    "RS256"
-  ],
+  "webAuthnPolicySignatureAlgorithms": ["ES256", "RS256"],
   "webAuthnPolicyRpId": "",
   "webAuthnPolicyAttestationConveyancePreference": "not specified",
   "webAuthnPolicyAuthenticatorAttachment": "not specified",
@@ -477,10 +700,7 @@
   "webAuthnPolicyAcceptableAaguids": [],
   "webAuthnPolicyExtraOrigins": [],
   "webAuthnPolicyPasswordlessRpEntityName": "keycloak",
-  "webAuthnPolicyPasswordlessSignatureAlgorithms": [
-    "ES256",
-    "RS256"
-  ],
+  "webAuthnPolicyPasswordlessSignatureAlgorithms": ["ES256", "RS256"],
   "webAuthnPolicyPasswordlessRpId": "",
   "webAuthnPolicyPasswordlessAttestationConveyancePreference": "not specified",
   "webAuthnPolicyPasswordlessAuthenticatorAttachment": "not specified",
@@ -490,120 +710,17 @@
   "webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister": false,
   "webAuthnPolicyPasswordlessAcceptableAaguids": [],
   "webAuthnPolicyPasswordlessExtraOrigins": [],
-  "users": [
-    {
-      "id": "9d244dcc-9d8e-44ac-9eb0-91f9f9ee4e84",
-      "username": "service-account-class-microservice",
-      "emailVerified": false,
-      "enabled": true,
-      "createdTimestamp": 1756924951322,
-      "totp": false,
-      "serviceAccountClientId": "class-microservice",
-      "disableableCredentialTypes": [],
-      "requiredActions": [],
-      "realmRoles": [
-        "default-roles-gimnasio"
-      ],
-      "notBefore": 0,
-      "groups": []
-    },
-    {
-      "id": "93c04b0d-ffcc-4dcf-af23-2d673982e48c",
-      "username": "service-account-coach-microservice",
-      "emailVerified": false,
-      "enabled": true,
-      "createdTimestamp": 1756924816992,
-      "totp": false,
-      "serviceAccountClientId": "coach-microservice",
-      "disableableCredentialTypes": [],
-      "requiredActions": [],
-      "realmRoles": [
-        "default-roles-gimnasio"
-      ],
-      "notBefore": 0,
-      "groups": []
-    },
-    {
-      "id": "db91ebfc-6af9-4cf4-9cfd-0dedb7b3b7e8",
-      "username": "service-account-equipament-microservice",
-      "emailVerified": false,
-      "enabled": true,
-      "createdTimestamp": 1756924875134,
-      "totp": false,
-      "serviceAccountClientId": "equipament-microservice",
-      "disableableCredentialTypes": [],
-      "requiredActions": [],
-      "realmRoles": [
-        "default-roles-gimnasio"
-      ],
-      "notBefore": 0,
-      "groups": []
-    },
-    {
-      "id": "e72bdd51-de90-49d7-83fa-37ace32f411c",
-      "username": "service-account-member-microservice",
-      "emailVerified": false,
-      "enabled": true,
-      "createdTimestamp": 1756924749127,
-      "totp": false,
-      "serviceAccountClientId": "member-microservice",
-      "disableableCredentialTypes": [],
-      "requiredActions": [],
-      "realmRoles": [
-        "default-roles-gimnasio"
-      ],
-      "notBefore": 0,
-      "groups": []
-    },
-    {
-      "id": "f1984b05-4455-4548-992f-9963385cba0f",
-      "username": "service-account-notification-microservice",
-      "emailVerified": false,
-      "enabled": true,
-      "createdTimestamp": 1757360203781,
-      "totp": false,
-      "serviceAccountClientId": "notification-microservice",
-      "disableableCredentialTypes": [],
-      "requiredActions": [],
-      "realmRoles": [
-        "default-roles-gimnasio"
-      ],
-      "notBefore": 0,
-      "groups": []
-    },
-    {
-      "id": "571b5853-b9b1-4ca6-b010-057a3b87b5d7",
-      "username": "service-account-payment-microservice",
-      "emailVerified": false,
-      "enabled": true,
-      "createdTimestamp": 1757360070505,
-      "totp": false,
-      "serviceAccountClientId": "payment-microservice",
-      "disableableCredentialTypes": [],
-      "requiredActions": [],
-      "realmRoles": [
-        "default-roles-gimnasio"
-      ],
-      "notBefore": 0,
-      "groups": []
-    }
-  ],
   "scopeMappings": [
     {
       "clientScope": "offline_access",
-      "roles": [
-        "offline_access"
-      ]
+      "roles": ["offline_access"]
     }
   ],
   "clientScopeMappings": {
     "account": [
       {
         "client": "account-console",
-        "roles": [
-          "manage-account",
-          "view-groups"
-        ]
+        "roles": ["manage-account", "view-groups"]
       }
     ]
   },
@@ -613,14 +730,12 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/Gimnasio/account/",
+      "baseUrl": "/realms/gimnasio/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [
-        "/realms/Gimnasio/account/*"
-      ],
+      "redirectUris": ["/realms/gimnasio/account/*"],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -639,35 +754,20 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
-      "defaultClientScopes": [
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "4496a73b-6f5e-4406-93f9-ec1dbd542602",
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/Gimnasio/account/",
+      "baseUrl": "/realms/gimnasio/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [
-        "/realms/Gimnasio/account/*"
-      ],
+      "redirectUris": ["/realms/gimnasio/account/*"],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -697,21 +797,8 @@
           "config": {}
         }
       ],
-      "defaultClientScopes": [
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "92241b6b-1865-4e3e-8b0b-d2ab79e58011",
@@ -735,26 +822,14 @@
       "protocol": "openid-connect",
       "attributes": {
         "realm_client": "false",
-        "client.use.lightweight.access.token.enabled": "true"
+        "client.use.lightweight.access.token.enabled": "true",
+        "post.logout.redirect.uris": "+"
       },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": 0,
-      "defaultClientScopes": [
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "a26a6a90-b0af-439e-81bd-639ec1c1cbf1",
@@ -777,32 +852,20 @@
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "realm_client": "true"
+        "realm_client": "true",
+        "post.logout.redirect.uris": "+"
       },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
-      "defaultClientScopes": [
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "fe8c36ee-e74b-495b-b557-20d88dcd3189",
       "clientId": "class-microservice",
       "name": "class-microservice",
-      "description": "Gestión de clases y sesiones\nProgramación, reservas, asistencia",
+      "description": "Gestión de clases y sesiones",
       "rootUrl": "",
       "adminUrl": "",
       "baseUrl": "",
@@ -811,12 +874,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "sgH1IMFwi6EHIX55UqxjkUQ3PfnnSVdI",
-      "redirectUris": [
-        "http://localhost:8084/*"
-      ],
-      "webOrigins": [
-        "http://localhost:8084"
-      ],
+      "redirectUris": ["http://localhost:8084/*"],
+      "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -828,41 +887,41 @@
       "frontchannelLogout": true,
       "protocol": "openid-connect",
       "attributes": {
-        "realm_client": "false",
-        "oidc.ciba.grant.enabled": "false",
         "client.secret.creation.time": "1756924951",
-        "backchannel.logout.session.required": "true",
+        "request.object.signature.alg": "any",
+        "request.object.encryption.alg": "any",
+        "client.introspection.response.allow.jwt.claim.enabled": "false",
         "standard.token.exchange.enabled": "false",
         "frontchannel.logout.session.required": "true",
         "oauth2.device.authorization.grant.enabled": "false",
+        "use.jwks.url": "false",
+        "backchannel.logout.revoke.offline.tokens": "false",
+        "use.refresh.tokens": "true",
+        "realm_client": "false",
+        "oidc.ciba.grant.enabled": "false",
+        "client.use.lightweight.access.token.enabled": "false",
+        "backchannel.logout.session.required": "true",
+        "request.object.required": "not required",
+        "client_credentials.use_refresh_token": "false",
+        "access.token.header.type.rfc9068": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
+        "acr.loa.map": "{}",
         "display.on.consent.screen": "false",
-        "backchannel.logout.revoke.offline.tokens": "false"
+        "request.object.encryption.enc": "any",
+        "token.response.type.bearer.lower-case": "false"
       },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "service_account",
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["service_account", "web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "a9f4a4cd-821b-4346-a009-402dd1cbc66a",
       "clientId": "coach-microservice",
       "name": "coach-microservice",
-      "description": "Propósito: Gestión de entrenadores\nPerfiles de entrenadores, especialidades, disponibilidad",
+      "description": "Gestión de entrenadores\n",
       "rootUrl": "",
       "adminUrl": "",
       "baseUrl": "",
@@ -871,12 +930,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "4HaxIWJzN089rgBo1UwZrQWut4vN1SGy",
-      "redirectUris": [
-        "http://localhost:8082/*"
-      ],
-      "webOrigins": [
-        "http://localhost:8082"
-      ],
+      "redirectUris": ["http://localhost:8082/*"],
+      "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -901,28 +956,14 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "service_account",
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["service_account", "web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "7630bbb4-898c-4215-b5a7-72aec5e32e7f",
       "clientId": "equipament-microservice",
       "name": "equipament-microservice",
-      "description": "Gestión de equipamiento del gimnasio\n Inventario, estado, mantenimiento",
+      "description": "Gestión de equipamiento del gimnasio",
       "rootUrl": "",
       "adminUrl": "",
       "baseUrl": "",
@@ -931,12 +972,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "RTHgGVT3APVz2ZJSyx1uMaacZI30uxk9",
-      "redirectUris": [
-        "http://localhost:8083/*"
-      ],
-      "webOrigins": [
-        "http://localhost:8083"
-      ],
+      "redirectUris": ["http://localhost:8083/*"],
+      "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -961,28 +998,14 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "service_account",
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["service_account", "web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "7ef4dca7-5435-4874-90f3-058a2768f181",
       "clientId": "member-microservice",
       "name": "member-microservice",
-      "description": "Propósito: Gestión de miembros del gimnasio\nInformación personal, membresías, estado de cuenta",
+      "description": "Gestión de miembros del gimnasio",
       "rootUrl": "",
       "adminUrl": "",
       "baseUrl": "",
@@ -991,12 +1014,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "dDQjHWPgJbvUu7mryOEQNbMaReQz9NFK",
-      "redirectUris": [
-        "http://localhost:8081/*"
-      ],
-      "webOrigins": [
-        "http://localhost:8081"
-      ],
+      "redirectUris": ["http://localhost:8081/*"],
+      "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -1021,28 +1040,14 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "service_account",
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["service_account", "web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "ee1c2458-6c6e-4404-8594-26a1d139b4ff",
       "clientId": "notification-microservice",
       "name": "notification-microservice",
-      "description": "Microservicio para envio de notificaciones",
+      "description": "Gestión de envío de notificaciones",
       "rootUrl": "",
       "adminUrl": "",
       "baseUrl": "",
@@ -1051,12 +1056,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "sY9knCeLplF2lno7FjzVPOWS4Df2Yv0j",
-      "redirectUris": [
-        "http://localhost:8085/*"
-      ],
-      "webOrigins": [
-        "http://localhost:8085"
-      ],
+      "redirectUris": ["http://localhost:8085/*"],
+      "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -1081,28 +1082,14 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "web-origins",
-        "service_account",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["service_account", "web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "25fc33dc-a3cc-4d65-bb54-4f946fadfd22",
       "clientId": "payment-microservice",
       "name": "payment-microservice",
-      "description": "Microservicios para procesar pagos",
+      "description": "Gestión de pagos",
       "rootUrl": "",
       "adminUrl": "",
       "baseUrl": "",
@@ -1111,12 +1098,8 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "PX5QB3BP9KDPip6EllHftCcO4Td8FEhb",
-      "redirectUris": [
-        "http://localhost:8086/*"
-      ],
-      "webOrigins": [
-        "http://localhost:8086"
-      ],
+      "redirectUris": ["http://localhost:8086/*"],
+      "webOrigins": ["*"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -1141,22 +1124,8 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "defaultClientScopes": [
-        "service_account",
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["service_account", "web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "4563f13c-d2ae-4a9d-9351-30b6f25f686e",
@@ -1179,43 +1148,27 @@
       "frontchannelLogout": false,
       "protocol": "openid-connect",
       "attributes": {
-        "realm_client": "true"
+        "realm_client": "true",
+        "post.logout.redirect.uris": "+"
       },
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
-      "defaultClientScopes": [
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     },
     {
       "id": "03a59a29-bcb6-4f44-bfb9-b5f9accc5dda",
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/Gimnasio/console/",
+      "baseUrl": "/admin/gimnasio/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [
-        "/admin/Gimnasio/console/*"
-      ],
-      "webOrigins": [
-        "+"
-      ],
+      "redirectUris": ["/admin/gimnasio/console/*"],
+      "webOrigins": ["+"],
       "notBefore": 0,
       "bearerOnly": false,
       "consentRequired": false,
@@ -1253,21 +1206,8 @@
           }
         }
       ],
-      "defaultClientScopes": [
-        "web-origins",
-        "acr",
-        "profile",
-        "roles",
-        "basic",
-        "email"
-      ],
-      "optionalClientScopes": [
-        "address",
-        "phone",
-        "organization",
-        "offline_access",
-        "microprofile-jwt"
-      ]
+      "defaultClientScopes": ["web-origins", "acr", "profile", "roles", "basic", "email"],
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt"]
     }
   ],
   "clientScopes": [
@@ -1289,8 +1229,9 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "client_id",
-            "id.token.claim": "true",
             "introspection.token.claim": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "client_id",
             "jsonType.label": "String"
@@ -1304,8 +1245,9 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "clientAddress",
-            "id.token.claim": "true",
             "introspection.token.claim": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "clientAddress",
             "jsonType.label": "String"
@@ -1319,8 +1261,9 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "clientHost",
-            "id.token.claim": "true",
             "introspection.token.claim": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "clientHost",
             "jsonType.label": "String"
@@ -1432,6 +1375,7 @@
           "config": {
             "introspection.token.claim": "true",
             "multivalued": "true",
+            "userinfo.token.claim": "true",
             "user.attribute": "foo",
             "id.token.claim": "true",
             "access.token.claim": "true",
@@ -1459,12 +1403,13 @@
           "protocolMapper": "oidc-organization-membership-mapper",
           "consentRequired": false,
           "config": {
-            "id.token.claim": "true",
             "introspection.token.claim": "true",
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "organization",
-            "jsonType.label": "String",
-            "multivalued": "true"
+            "jsonType.label": "String"
           }
         }
       ]
@@ -1887,7 +1832,8 @@
           "config": {
             "id.token.claim": "true",
             "introspection.token.claim": "true",
-            "access.token.claim": "true"
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
           }
         }
       ]
@@ -1929,8 +1875,9 @@
           "consentRequired": false,
           "config": {
             "user.session.note": "AUTH_TIME",
-            "id.token.claim": "true",
             "introspection.token.claim": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "auth_time",
             "jsonType.label": "long"
@@ -1960,13 +1907,7 @@
     "acr",
     "basic"
   ],
-  "defaultOptionalClientScopes": [
-    "offline_access",
-    "address",
-    "phone",
-    "microprofile-jwt",
-    "organization"
-  ],
+  "defaultOptionalClientScopes": ["offline_access", "address", "phone", "microprofile-jwt", "organization"],
   "browserSecurityHeaders": {
     "contentSecurityPolicyReportOnly": "",
     "xContentTypeOptions": "nosniff",
@@ -1978,9 +1919,7 @@
   },
   "smtpServer": {},
   "eventsEnabled": false,
-  "eventsListeners": [
-    "jboss-logging"
-  ],
+  "eventsListeners": ["jboss-logging"],
   "enabledEventTypes": [],
   "adminEventsEnabled": false,
   "adminEventsDetailsEnabled": false,
@@ -1995,12 +1934,8 @@
         "subType": "anonymous",
         "subComponents": {},
         "config": {
-          "host-sending-registration-request-must-match": [
-            "true"
-          ],
-          "client-uris-must-match": [
-            "true"
-          ]
+          "host-sending-registration-request-must-match": ["true"],
+          "client-uris-must-match": ["true"]
         }
       },
       {
@@ -2010,9 +1945,7 @@
         "subType": "anonymous",
         "subComponents": {},
         "config": {
-          "allow-default-scopes": [
-            "true"
-          ]
+          "allow-default-scopes": ["true"]
         }
       },
       {
@@ -2023,14 +1956,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-usermodel-attribute-mapper",
-            "oidc-full-name-mapper",
+            "oidc-address-mapper",
             "oidc-sha256-pairwise-sub-mapper",
             "saml-user-property-mapper",
-            "saml-role-list-mapper",
+            "oidc-usermodel-attribute-mapper",
+            "oidc-full-name-mapper",
             "oidc-usermodel-property-mapper",
             "saml-user-attribute-mapper",
-            "oidc-address-mapper"
+            "saml-role-list-mapper"
           ]
         }
       },
@@ -2049,9 +1982,7 @@
         "subType": "authenticated",
         "subComponents": {},
         "config": {
-          "allow-default-scopes": [
-            "true"
-          ]
+          "allow-default-scopes": ["true"]
         }
       },
       {
@@ -2070,14 +2001,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-full-name-mapper",
-            "saml-role-list-mapper",
-            "saml-user-property-mapper",
-            "oidc-usermodel-property-mapper",
-            "saml-user-attribute-mapper",
             "oidc-usermodel-attribute-mapper",
-            "oidc-address-mapper",
-            "oidc-sha256-pairwise-sub-mapper"
+            "oidc-sha256-pairwise-sub-mapper",
+            "saml-user-property-mapper",
+            "saml-user-attribute-mapper",
+            "saml-role-list-mapper",
+            "oidc-usermodel-property-mapper",
+            "oidc-full-name-mapper",
+            "oidc-address-mapper"
           ]
         }
       },
@@ -2088,9 +2019,7 @@
         "subType": "anonymous",
         "subComponents": {},
         "config": {
-          "max-clients": [
-            "200"
-          ]
+          "max-clients": ["200"]
         }
       }
     ],
@@ -2101,12 +2030,8 @@
         "providerId": "rsa-enc-generated",
         "subComponents": {},
         "config": {
-          "priority": [
-            "100"
-          ],
-          "algorithm": [
-            "RSA-OAEP"
-          ]
+          "priority": ["100"],
+          "algorithm": ["RSA-OAEP"]
         }
       },
       {
@@ -2115,9 +2040,7 @@
         "providerId": "rsa-generated",
         "subComponents": {},
         "config": {
-          "priority": [
-            "100"
-          ]
+          "priority": ["100"]
         }
       },
       {
@@ -2126,12 +2049,8 @@
         "providerId": "hmac-generated",
         "subComponents": {},
         "config": {
-          "priority": [
-            "100"
-          ],
-          "algorithm": [
-            "HS512"
-          ]
+          "priority": ["100"],
+          "algorithm": ["HS512"]
         }
       },
       {
@@ -2140,9 +2059,7 @@
         "providerId": "aes-generated",
         "subComponents": {},
         "config": {
-          "priority": [
-            "100"
-          ]
+          "priority": ["100"]
         }
       }
     ]
@@ -2807,7 +2724,7 @@
       "alias": "CONFIGURE_TOTP",
       "name": "Configure OTP",
       "providerId": "CONFIGURE_TOTP",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 10,
       "config": {}
@@ -2825,7 +2742,7 @@
       "alias": "UPDATE_PASSWORD",
       "name": "Update Password",
       "providerId": "UPDATE_PASSWORD",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 30,
       "config": {}
@@ -2834,7 +2751,7 @@
       "alias": "UPDATE_PROFILE",
       "name": "Update Profile",
       "providerId": "UPDATE_PROFILE",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 40,
       "config": {}
@@ -2843,7 +2760,7 @@
       "alias": "VERIFY_EMAIL",
       "name": "Verify Email",
       "providerId": "VERIFY_EMAIL",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 50,
       "config": {}
@@ -2861,7 +2778,7 @@
       "alias": "webauthn-register",
       "name": "Webauthn Register",
       "providerId": "webauthn-register",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 70,
       "config": {}
@@ -2870,7 +2787,7 @@
       "alias": "webauthn-register-passwordless",
       "name": "Webauthn Register Passwordless",
       "providerId": "webauthn-register-passwordless",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 80,
       "config": {}
@@ -2879,7 +2796,7 @@
       "alias": "VERIFY_PROFILE",
       "name": "Verify Profile",
       "providerId": "VERIFY_PROFILE",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 90,
       "config": {}
@@ -2888,7 +2805,7 @@
       "alias": "delete_credential",
       "name": "Delete Credential",
       "providerId": "delete_credential",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 100,
       "config": {}
@@ -2897,7 +2814,7 @@
       "alias": "idp_link",
       "name": "Linking Identity Provider",
       "providerId": "idp_link",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 110,
       "config": {}
@@ -2906,7 +2823,7 @@
       "alias": "CONFIGURE_RECOVERY_AUTHN_CODES",
       "name": "Recovery Authentication Codes",
       "providerId": "CONFIGURE_RECOVERY_AUTHN_CODES",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 120,
       "config": {}
@@ -2915,7 +2832,7 @@
       "alias": "update_user_locale",
       "name": "Update User Locale",
       "providerId": "update_user_locale",
-      "enabled": true,
+      "enabled": false,
       "defaultAction": false,
       "priority": 1000,
       "config": {}
@@ -2930,13 +2847,20 @@
   "firstBrokerLoginFlow": "first broker login",
   "attributes": {
     "cibaBackchannelTokenDeliveryMode": "poll",
-    "cibaExpiresIn": "120",
     "cibaAuthRequestedUserHint": "login_hint",
-    "oauth2DeviceCodeLifespan": "600",
+    "clientOfflineSessionMaxLifespan": "0",
     "oauth2DevicePollingInterval": "5",
-    "parRequestUriLifespan": "60",
+    "clientSessionIdleTimeout": "0",
+    "clientOfflineSessionIdleTimeout": "0",
     "cibaInterval": "5",
-    "realmReusableOtpCode": "false"
+    "realmReusableOtpCode": "false",
+    "cibaExpiresIn": "120",
+    "oauth2DeviceCodeLifespan": "600",
+    "saml.signature.algorithm": "",
+    "parRequestUriLifespan": "60",
+    "clientSessionMaxLifespan": "0",
+    "frontendUrl": "",
+    "acr.loa.map": "{}"
   },
   "keycloakVersion": "26.3.3",
   "userManagedAccessAllowed": false,
